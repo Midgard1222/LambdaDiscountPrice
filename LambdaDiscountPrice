@@ -1,0 +1,16 @@
+import java.util.*;
+
+interface DiscountItems{
+  double dc(double q);
+}
+  public class LambdaExpression {
+    public static void main(String[] args) {
+      double regPrice = 1000;
+      DiscountItems tenPercent = (y) -> y - (y*.10);
+      DiscountItems twentyPercent = (y)-> y - (y*0.20);
+      DiscountItems fiftyPercent = (y)-> y - (y*0.50);
+      System.out.println(tenPercent.dc(regPrice));
+      System.out.println(twentyPercent.dc(regPrice));
+      System.out.println(fiftyPercent.dc(regPrice));
+  }
+}
